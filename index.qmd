@@ -1,0 +1,35 @@
+---
+title: "The Fool's Blog"
+---
+
+# Learn deeply. Build publicly. Explain clearly.
+
+Welcome to **The Fool's Blog** — a place where I document what I'm learning, building, researching, and figuring out.
+
+This site is a public record of the process, not just the finished results.
+
+## What you'll find here
+
+### Projects
+
+Things I'm building, experimenting with, and maintaining.
+
+[Explore Projects →](projects/index.qmd)
+
+### Learn
+
+Notes and explanations from things I'm studying — Linux, embedded systems, TinyML, signal processing, and more.
+
+[Explore Learn →](learn/index.qmd)
+
+### Journal
+
+A record of experiments, lessons, failures, ideas, and everyday observations.
+
+[Read the Journal →](journal/index.qmd)
+
+### Resources
+
+Books, papers, tools, and references that have been useful along the way.
+
+[Browse Resources →](resources/index.qmd)

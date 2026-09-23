@@ -1,0 +1,11 @@
+---
+title: Projects
+
+listing:
+  contents:
+    - "*/index.qmd"
+  type: default
+  sort: "date desc"
+---
+
+Things I'm building, experimenting with, and maintaining.

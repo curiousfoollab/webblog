@@ -1,0 +1,33 @@
+project:
+  type: website
+
+website:
+  title: "The Fool's Blog"
+
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+
+      - href: about.qmd
+        text: About
+
+      - href: projects/index.qmd
+        text: Projects
+
+      - href: learn/index.qmd
+        text: Learn
+
+      - href: journal/index.qmd
+        text: Journal
+
+      - href: resources/index.qmd
+        text: Resources
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    css: styles.css
+    toc: true

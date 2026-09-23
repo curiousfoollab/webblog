@@ -1,0 +1,11 @@
+---
+title: Learn
+
+listing:
+  contents:
+    - "*/index.qmd"
+  type: default
+  sort: "date desc"
+---
+
+Things I'm learning and notes from the process.

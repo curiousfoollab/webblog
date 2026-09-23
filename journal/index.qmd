@@ -1,0 +1,11 @@
+---
+title: Journal
+
+listing:
+  contents:
+    - "*/index.qmd"
+  type: default
+  sort: "date desc"
+---
+
+A chronological record of what I'm working on and thinking about.

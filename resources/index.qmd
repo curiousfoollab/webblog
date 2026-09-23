@@ -1,0 +1,11 @@
+---
+title: Resources
+
+listing:
+  contents:
+    - "*/index.qmd"
+  type: default
+  sort: "date desc"
+---
+
+Books, papers, tools, and other useful references.

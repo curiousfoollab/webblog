@@ -1,0 +1,8 @@
+---
+title: "About"
+---
+
+The Fool's Blog is my public learning journal.
+
+I use this space to document things I'm learning,
+building, researching, and exploring.

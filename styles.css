@@ -1,1 +1,841 @@
 /* css styles */
+/* =========================================================
+   THE FOOL'S BLOG
+   Custom theme
+   Style direction:
+   Editorial journal × Engineering notebook × Ghost-like blog
+   ========================================================= */
+
+
+/* =========================================================
+   1. DESIGN TOKENS
+   ========================================================= */
+
+:root {
+  --cf-bg: #faf9f6;
+  --cf-bg-soft: #f3f1ec;
+  --cf-surface: #ffffff;
+
+  --cf-text: #202124;
+  --cf-text-soft: #5f6368;
+  --cf-text-muted: #858585;
+
+  --cf-border: #dedbd4;
+  --cf-border-light: #ebe8e1;
+
+  --cf-accent: #315c72;
+  --cf-accent-hover: #23485b;
+
+  --cf-code-bg: #f1f0ec;
+
+  --cf-content-width: 760px;
+  --cf-wide-width: 1120px;
+  --cf-nav-width: 1200px;
+
+  --cf-radius: 4px;
+
+  --cf-serif:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  --cf-sans:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  --cf-mono:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    Menlo,
+    monospace;
+}
+
+
+/* =========================================================
+   2. GLOBAL
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cf-bg);
+  color: var(--cf-text);
+
+  font-family: var(--cf-sans);
+  font-size: 17px;
+  line-height: 1.75;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   3. NAVIGATION
+   ========================================================= */
+
+.navbar {
+  background: var(--cf-bg) !important;
+  border-bottom: 1px solid var(--cf-border-light);
+
+  min-height: 76px;
+  padding: 0;
+}
+
+.navbar-container {
+  max-width: var(--cf-nav-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.navbar-brand {
+  color: var(--cf-text) !important;
+
+  font-family: var(--cf-sans);
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.navbar-nav .nav-link {
+  color: var(--cf-text-soft) !important;
+
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--cf-text) !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--cf-text) !important;
+}
+
+
+/* =========================================================
+   4. MAIN PAGE CONTAINER
+   ========================================================= */
+
+#quarto-content {
+  max-width: var(--cf-wide-width);
+  margin: 0 auto;
+  padding: 64px 32px 100px;
+}
+
+
+/* =========================================================
+   5. PAGE TITLES
+   ========================================================= */
+
+.quarto-title-block {
+  max-width: var(--cf-content-width);
+  margin-bottom: 48px;
+}
+
+.quarto-title h1,
+.quarto-title-block .title {
+  color: var(--cf-text);
+
+  font-family: var(--cf-sans);
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1.08;
+
+  letter-spacing: -0.035em;
+
+  margin-bottom: 14px;
+}
+
+.description {
+  color: var(--cf-text-soft);
+
+  font-size: 18px;
+  line-height: 1.65;
+
+  max-width: 700px;
+}
+
+
+/* =========================================================
+   6. NORMAL CONTENT
+   ========================================================= */
+
+main {
+  max-width: var(--cf-content-width);
+}
+
+main p {
+  margin-top: 0;
+  margin-bottom: 1.4em;
+}
+
+main a {
+  color: var(--cf-accent);
+
+  text-decoration:
+    underline;
+
+  text-decoration-color:
+    rgba(49, 92, 114, 0.35);
+
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
+}
+
+main a:hover {
+  color: var(--cf-accent-hover);
+
+  text-decoration-color:
+    var(--cf-accent-hover);
+}
+
+
+/* =========================================================
+   7. HEADINGS
+   ========================================================= */
+
+main h1,
+main h2,
+main h3,
+main h4,
+main h5,
+main h6 {
+  color: var(--cf-text);
+
+  font-family: var(--cf-sans);
+
+  font-weight: 500;
+
+  letter-spacing: -0.025em;
+
+  scroll-margin-top: 100px;
+}
+
+main h2 {
+  font-size: 1.9rem;
+  line-height: 1.25;
+
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+
+  padding-bottom: 0.45rem;
+
+  border-bottom: 1px solid var(--cf-border-light);
+}
+
+main h3 {
+  font-size: 1.35rem;
+
+  margin-top: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+main h4 {
+  font-size: 1.1rem;
+
+  margin-top: 1.8rem;
+}
+
+
+/* =========================================================
+   8. LISTS
+   ========================================================= */
+
+main ul,
+main ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+main li {
+  margin-bottom: 0.35rem;
+}
+
+
+/* =========================================================
+   9. BLOCKQUOTES
+   ========================================================= */
+
+blockquote {
+  margin: 2rem 0;
+
+  padding: 1rem 1.5rem;
+
+  border-left: 3px solid var(--cf-accent);
+
+  background: var(--cf-bg-soft);
+
+  color: var(--cf-text-soft);
+
+  font-family: var(--cf-serif);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+
+/* =========================================================
+   10. CODE
+   ========================================================= */
+
+code {
+  color: var(--cf-text);
+
+  background: var(--cf-code-bg);
+
+  border: 1px solid var(--cf-border-light);
+
+  border-radius: 3px;
+
+  padding: 0.12em 0.35em;
+
+  font-family: var(--cf-mono);
+  font-size: 0.88em;
+}
+
+pre {
+  margin: 2rem 0;
+
+  padding: 1.25rem 1.4rem;
+
+  background: #f2f1ed !important;
+
+  border: 1px solid var(--cf-border-light);
+
+  border-radius: var(--cf-radius);
+
+  overflow-x: auto;
+
+  line-height: 1.55;
+}
+
+pre code {
+  background: transparent;
+
+  border: 0;
+
+  padding: 0;
+
+  font-size: 0.86rem;
+}
+
+
+/* =========================================================
+   11. IMAGES
+   ========================================================= */
+
+main img {
+  max-width: 100%;
+  height: auto;
+
+  display: block;
+
+  margin: 2rem auto;
+
+  border-radius: var(--cf-radius);
+}
+
+figure {
+  margin: 2.5rem 0;
+}
+
+figcaption {
+  color: var(--cf-text-muted);
+
+  font-size: 0.85rem;
+  line-height: 1.5;
+
+  text-align: center;
+
+  margin-top: 0.7rem;
+}
+
+
+/* =========================================================
+   12. TABLES
+   ========================================================= */
+
+table {
+  width: 100%;
+
+  margin: 2rem 0;
+
+  border-collapse: collapse;
+
+  font-size: 0.95rem;
+}
+
+thead {
+  border-bottom: 2px solid var(--cf-border);
+}
+
+th {
+  color: var(--cf-text);
+
+  font-weight: 600;
+
+  text-align: left;
+
+  padding: 0.75rem;
+}
+
+td {
+  padding: 0.75rem;
+
+  border-bottom: 1px solid var(--cf-border-light);
+}
+
+
+/* =========================================================
+   13. QUARTO LISTINGS
+   ========================================================= */
+
+/*
+   This is important for:
+   Learn
+   Projects
+   Journal
+   Resources
+*/
+
+.quarto-listing {
+  width: 100%;
+  max-width: 100%;
+}
+
+.quarto-listing .list {
+  width: 100%;
+  max-width: 100%;
+}
+
+.quarto-listing .listing-item {
+  width: 100%;
+
+  padding: 26px 0;
+
+  border-bottom: 1px solid var(--cf-border-light);
+
+  transition:
+    padding-left 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.quarto-listing .listing-item:first-child {
+  border-top: 1px solid var(--cf-border-light);
+}
+
+.quarto-listing .listing-item:hover {
+  padding-left: 8px;
+}
+
+
+/* Listing title */
+
+.quarto-listing .listing-title {
+  display: block;
+
+  color: var(--cf-text);
+
+  font-family: var(--cf-sans);
+
+  font-size: 1.35rem;
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  letter-spacing: -0.02em;
+
+  white-space: normal;
+
+  margin-bottom: 7px;
+}
+
+.quarto-listing .listing-title:hover {
+  color: var(--cf-accent);
+}
+
+
+/* Listing description */
+
+.quarto-listing .listing-description {
+  color: var(--cf-text-soft);
+
+  font-size: 0.98rem;
+
+  line-height: 1.6;
+
+  max-width: 720px;
+}
+
+
+/* Listing metadata */
+
+.quarto-listing .listing-date,
+.quarto-listing .listing-author,
+.quarto-listing .listing-categories {
+  color: var(--cf-text-muted);
+
+  font-size: 0.78rem;
+
+  letter-spacing: 0.04em;
+
+  text-transform: uppercase;
+}
+
+
+/* Category labels */
+
+.quarto-listing .listing-categories .listing-category {
+  color: var(--cf-accent);
+
+  background: transparent;
+
+  border: 0;
+
+  padding: 0;
+}
+
+
+/* =========================================================
+   14. ARTICLE PAGES
+   ========================================================= */
+
+body:has(.quarto-title-block) .quarto-title-block {
+  max-width: var(--cf-content-width);
+}
+
+.quarto-title-meta {
+  color: var(--cf-text-muted);
+
+  font-size: 0.82rem;
+
+  letter-spacing: 0.04em;
+}
+
+.quarto-title-meta-heading {
+  color: var(--cf-text-muted);
+
+  font-size: 0.72rem;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   15. TABLE OF CONTENTS
+   ========================================================= */
+
+#TOC {
+  border-left: 1px solid var(--cf-border);
+
+  padding-left: 18px;
+}
+
+#TOC .nav-link {
+  color: var(--cf-text-muted);
+
+  font-size: 0.82rem;
+
+  line-height: 1.45;
+
+  padding: 4px 0;
+
+  transition: color 0.2s ease;
+}
+
+#TOC .nav-link:hover {
+  color: var(--cf-text);
+}
+
+#TOC .nav-link.active {
+  color: var(--cf-accent);
+
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   16. SIDEBAR
+   ========================================================= */
+
+.sidebar {
+  border-right: 1px solid var(--cf-border-light);
+}
+
+.sidebar .sidebar-item {
+  font-size: 0.9rem;
+}
+
+
+/* =========================================================
+   17. CALLOUTS
+   ========================================================= */
+
+.callout {
+  margin: 2rem 0;
+
+  border-radius: var(--cf-radius);
+
+  border: 1px solid var(--cf-border);
+}
+
+.callout-header {
+  font-weight: 600;
+}
+
+.callout-body {
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   18. BUTTONS
+   ========================================================= */
+
+.btn {
+  border-radius: var(--cf-radius);
+
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  letter-spacing: 0.02em;
+
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--cf-text);
+
+  border-color: var(--cf-text);
+
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--cf-accent);
+
+  border-color: var(--cf-accent);
+}
+
+
+/* =========================================================
+   19. HOMEPAGE
+   ========================================================= */
+
+/*
+   Homepage hero.
+   We don't depend on special HTML classes here;
+   these selectors work with the normal Quarto page.
+*/
+
+.home .quarto-title-block {
+  max-width: 900px;
+
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+.home .quarto-title-block .title {
+  font-size: clamp(3rem, 8vw, 6rem);
+
+  line-height: 0.98;
+
+  letter-spacing: -0.055em;
+}
+
+
+/* =========================================================
+   20. FOOTER
+   ========================================================= */
+
+.nav-footer {
+  background: var(--cf-bg) !important;
+
+  border-top: 1px solid var(--cf-border-light);
+
+  padding: 40px 32px;
+}
+
+.nav-footer a {
+  color: var(--cf-text-soft);
+}
+
+.nav-footer a:hover {
+  color: var(--cf-text);
+}
+
+
+/* =========================================================
+   21. HORIZONTAL RULE
+   ========================================================= */
+
+hr {
+  border: 0;
+
+  border-top: 1px solid var(--cf-border-light);
+
+  margin: 3rem 0;
+}
+
+
+/* =========================================================
+   22. SEARCH
+   ========================================================= */
+
+.aa-DetachedSearchButton,
+.aa-SearchInput,
+.search-input {
+  border-radius: var(--cf-radius);
+}
+
+
+/* =========================================================
+   23. MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  #quarto-content {
+    padding:
+      48px
+      24px
+      80px;
+  }
+
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+  .quarto-title h1,
+  .quarto-title-block .title {
+    font-size: 2.5rem;
+  }
+
+  main h2 {
+    font-size: 1.65rem;
+  }
+
+  .quarto-listing .listing-title {
+    font-size: 1.25rem;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  #quarto-content {
+    padding:
+      36px
+      18px
+      64px;
+  }
+
+  .navbar {
+    min-height: 64px;
+  }
+
+  .navbar-brand {
+    font-size: 15px;
+  }
+
+  .quarto-title-block {
+    margin-bottom: 36px;
+  }
+
+  .quarto-title h1,
+  .quarto-title-block .title {
+    font-size: 2.15rem;
+
+    letter-spacing: -0.035em;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .quarto-listing .listing-item {
+    padding: 22px 0;
+  }
+
+  .quarto-listing .listing-title {
+    font-size: 1.2rem;
+
+    /*
+      Allow wrapping on small screens.
+      This prevents horizontal overflow.
+    */
+    white-space: normal;
+  }
+
+  pre {
+    margin-left: -4px;
+    margin-right: -4px;
+
+    padding: 1rem;
+  }
+
+  blockquote {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+
+/* =========================================================
+   24. ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--cf-accent);
+
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   25. REDUCE MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}

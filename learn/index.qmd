@@ -7,5 +7,3 @@ listing:
   type: default
   sort: "title asc"
 ---
-
-A collection of notes, courses, experiments, and things I'm learning.

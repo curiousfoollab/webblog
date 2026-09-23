@@ -1,11 +1,11 @@
 ---
-title: Learn
-
+title: "Learn"
+description: "Notes, courses, experiments, and things I'm learning."
 listing:
   contents:
     - "*/index.qmd"
   type: default
-  sort: "date desc"
+  sort: "title asc"
 ---
 
-Things I'm learning and notes from the process.
+A collection of notes, courses, experiments, and things I'm learning.

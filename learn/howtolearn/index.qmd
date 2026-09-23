@@ -1,0 +1,17 @@
+---
+title: "Learning How to Learn"
+description: "My notes and reflections from the Learning How to Learn course."
+
+listing:
+  contents:
+    - "week-*.qmd"
+  type: default
+  sort: date-asc
+---
+
+I'm taking the **Learning How to Learn** course to better understand how
+learning works and how I can become a better learner.
+
+This is my personal record of what I learn from the course.
+
+## Course notes 
